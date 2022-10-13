@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Reverse the string</h1>
+
+    <script>
+        const str = "This is a string";
+        console.log(reverse(str));
+        function reverse(str) {
+            let x = "";
+            for (let i = str.length - 1; i >= 0; i--) {
+                x += str[i];
+            }
+            return x;
+        }
+    </script>
+</body>
+
+</html>

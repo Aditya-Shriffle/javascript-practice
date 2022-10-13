@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String to array</title>
+</head>
+
+<body>
+    <h1>Convert string into reverse order and also convert into array</h1>
+    <h3>String: My name is Aditya</h3>
+    <h5>String reverse order:-</h5>
+    <p id="reverse_str"></p>
+    <h5>Array convertion:-</h5>
+    <p id="arr_position"></p>
+    <p id="array"></p>
+    <h5>Array Reverse order:-</h5>
+    <p id="reverse_array"></p>
+
+
+    <script>
+        const mystr = "My name is Aditya";
+
+        function ReverseString(event) {
+            return event.split('').reverse().join('')
+        }
+        document.getElementById("reverse_str").innerHTML = ReverseString(mystr);
+
+
+        const myarray = mystr.split(" ");
+        document.getElementById("arr_position").innerHTML = "myarray[1]:- " + myarray[1];
+        document.getElementById("array").innerHTML = myarray;
+
+        const reverse = myarray.reverse();
+        document.getElementById("reverse_array").innerHTML = reverse;
+
+    </script>
+</body>
+
+</html>

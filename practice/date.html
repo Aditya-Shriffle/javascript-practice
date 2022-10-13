@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date</title>
+</head>
+<body>
+    <h1>Lorem ipsum dolor sit amet.</h1>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum maxime magni nemo recusandae reiciendis minus, deleniti rerum eligendi totam reprehenderit omnis, in hic. Sapiente velit maiores minus facilis quas accusamus saepe eos quod, a sed. Beatae fuga enim expedita dignissimos, sequi id, nesciunt ratione asperiores veniam saepe, laborum ut. Deleniti.</p>
+    <p id="demo"></p>
+    <p id="strdate"></p>
+    <p id="fulldate"></p>
+    <p id="secdate"></p>
+    <p id="secdate2"></p>
+    <p id="str"></p>
+    <p id="utc"></p>
+    <p id="date"></p>
+    <p id="iso"></p>
+
+
+
+
+    <script>
+        const myDate = new Date();
+        document.getElementById("demo").innerHTML = "Todat date pick by Javascript:- " + myDate;
+        document.getElementById("str").innerHTML = "Todat date pick by Javascript:- " + myDate.toString();
+        document.getElementById("utc").innerHTML = "Todat date pick by Javascript:- " + myDate.toUTCString();
+        document.getElementById("date").innerHTML = "Todat date pick by Javascript:- " + myDate.toDateString();
+        document.getElementById("iso").innerHTML = "Todat date pick by Javascript:- " + myDate.toISOString();
+
+        const strDate = new Date("October 13, 2022 11:30:05");
+        document.getElementById("strdate").innerHTML = "Date pick by string:- " + strDate;
+
+        const fullDate = new Date(2022, 00, 20, 10, 45, 40, 0);
+        document.getElementById("fulldate").innerHTML = "Date pick by details:- " + fullDate;
+
+        const secDate = new Date(0);
+        const secDate2 = new Date(1000000000000);   //max 15 for accurate
+        document.getElementById("secdate").innerHTML = "Date at 0 sec:- " + secDate;
+        document.getElementById("secdate2").innerHTML = "Date at 1000000000000 sec:- " + secDate2;
+
+
+    </script>
+</body>
+</html>

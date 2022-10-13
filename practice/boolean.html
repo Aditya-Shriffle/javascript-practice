@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Lorem ipsum dolor sit amet.</h1>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum ratione voluptatibus qui, repellat quidem,
+        laborum quam eum, sit maxime nam quisquam saepe perferendis. Dignissimos a eligendi est dolorum, ab doloribus
+        voluptatem ipsam excepturi numquam, non cumque repellendus natus velit nihil enim corrupti, illum vel dolores
+        perferendis blanditiis doloremque omnis. Libero.</p>
+
+
+    <h5>
+        That type consist only two way:-
+        <li>Yes / No</li>
+        <li>On / Off</li>
+        <li>True / False</li>
+    </h5>
+    )
+    <p id="demo"></p>
+
+    <h2>It has only three conditions:-</h2>
+    <li>Comparision:- ==(Equal to)</li>
+    <li>Greater than:- ">"</li>
+    <li>less than:- "<" </li>
+
+    <p id="obj"></p>
+    <p id="compare"></p>
+
+
+
+            <script>
+                document.getElementById("demo").innerHTML = Boolean(10 > 9);
+
+
+                let x = false;
+                let y = new Boolean(false);
+                document.getElementById("obj").innerHTML = typeof x + "<br>" + typeof y;
+
+                //Comparing two JavaScript objects always return false.
+                const xx = new Boolean(false);
+                const yy = new Boolean(false);
+                document.getElementById("compare").innerHTML = (xx === yy);
+            </script>
+</body>
+
+</html>
