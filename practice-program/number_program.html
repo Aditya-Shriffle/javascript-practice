@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Lorem ipsum dolor sit amet.</h1>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit doloribus veniam fugit ut iusto eligendi nulla?
+        Nam temporibus odit magnam vitae, quia vel eum consequatur possimus nisi voluptas. Est quaerat non adipisci,
+        ipsa pariatur nam commodi nihil architecto harum quam officiis voluptatibus id doloremque itaque! Nemo ipsum ex
+        nisi provident.</p>
+
+    <h4>highest and lowest number value can be written as in the scientific way:-</h4>
+    <p id="demox"></p>
+    <p id="demoy"></p>
+    <p id="demoxx"></p>
+    <p id="add"></p>
+    <p id="divide"></p>
+    <p id="NaN"></p>
+    <p id="zero"></p>
+    <p id="typeof"></p>
+    <p id="typeof2"></p>
+    <p id="twoobj"></p>
+
+
+
+
+
+    <script>
+        let x = 565e5;
+        let y = 565e-5;
+        document.getElementById("demox").innerHTML = x;
+        document.getElementById("demoy").innerHTML = y;
+
+        //Integers (numbers without scientific notation) are accurate up to 15 digits
+        let xx = 999999999999999;
+        let yy = 9999999999999999; // too big
+        document.getElementById("demoxx").innerHTML = xx + "<br>" + yy;
+
+        //Adding two number
+        let num11 = 10;
+        let num12 = "20";
+        let z = num11 + num12;
+        document.getElementById("add").innerHTML = z;
+
+        //string convert in number and divide
+        let num1 = "1005";
+        let num2 = "5";
+        let num3 = num1 / num2;
+        document.getElementById("divide").innerHTML = num3;
+
+        //NaN (Not a Number) or non - numeric string
+        document.getElementById("NaN").innerHTML = 100 / "aditya";
+
+        //zero get infinty
+        let num123 = 2 / 0;
+        document.getElementById("zero").innerHTML = num123;
+
+        //Type of number
+        let num23 = 500;
+        let num22 = new Number(500);
+        let num24 = new Number(500);
+        document.getElementById("typeof").innerHTML = typeof num23 + "<br>" + typeof num22;
+        document.getElementById("typeof2").innerHTML = (num23 == num22);
+        document.getElementById("twoobj").innerHTML = (num22 == num24);
+        
+    </script>
+</body>
+
+</html>

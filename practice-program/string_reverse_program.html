@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practice program</title>
+</head>
+
+<body>
+    <h3>String: My name is Aditya</h3>
+    <h5>Array convertion:-</h5>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <h5>Reverse order:-</h5>
+    <p id="demo2"></p>
+
+
+
+    <script>
+        const mystr = "My name is Aditya";
+
+        function ReverseString(event) {
+            return event.split('').reverse().join('')
+        }
+        document.write(ReverseString("My name is Aditya"));
+
+
+        const myarray = mystr.split(" ");
+        document.getElementById("demo").innerHTML = myarray[1];
+        document.getElementById("demo1").innerHTML = myarray;
+
+        const reverse = myarray.reverse();
+        document.getElementById("demo2").innerHTML = reverse;
+
+        var x = "string" + 34 + 56;
+        var y = 23 + 45 + "string";
+        var z = "string" + " " + "string"
+        console.log(x);
+        console.log(y);
+        console.log(z);
+
+
+        const array = ['1', '2', '3', '4'];
+        const obj1 = Object.assign( {},array);
+        console.log(obj1);
+
+
+        
+        const newArr = [
+        {id: 1, name: 'Foo'},
+        {id: 2, name: 'Baz'},
+        {id: 3, name: 'Abc'}
+        ].map(v => ({ ...v, mod: true }))
+        console.log(newArr);
+
+    </script>
+</body>
+
+</html>

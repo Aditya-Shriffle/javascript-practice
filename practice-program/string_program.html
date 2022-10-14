@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Lorem ipsum dolor sit amet.</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae exercitationem beatae dolorum adipisci eaque
+        doloremque esse temporibus veritatis dolores amet, animi expedita nostrum molestias fugiat similique distinctio
+        impedit. Quidem sit voluptatum corporis dolorem id magni nihil numquam vitae. Necessitatibus similique officiis
+        tempore itaque rerum neque ut atque asperiores in recusandae!</p>
+
+    <h5>Its a string using js</h5>
+    <p id="demo"></p>
+    <p id="demoAdd"></p>
+    <p id="demolength"></p>
+
+    <p>backslash escape character:-</p>
+    <p>/' == '</p>
+    <p>/" == "</p>
+    <p>// == /</p>
+
+
+    <p id="obj"></p>
+    <p id="obj1"></p>
+
+
+    <script>
+        let a = "Aditya Jain";
+        let b = "is living in Indore";
+        let c = a + " " + b;
+        let length = c.length;
+        document.getElementById("demo").innerHTML = a + " " + b;
+        document.getElementById("demoAdd").innerHTML = c;
+        document.getElementById("demolength").innerHTML = length;
+
+        //As a object
+        let x = "Aditya";
+        let y = new String("Aditya");
+        document.getElementById("obj").innerHTML = typeof x + "<br>" + typeof y;
+        document.getElementById("obj1").innerHTML = (x==y);
+
+
+        
+    </script>
+</body>
+
+</html>
