@@ -11,8 +11,6 @@
 <body>
     <h1>Sum of array and then make it empty:- </h1>
     <d id="demo"></d>
-    <d id="demoEmpty"></d>
-
     <script>
         const arr = [1, 2, 3, 4, 5];
         let sum = 0;
@@ -20,10 +18,8 @@
             sum += arr[i];
         }
         document.getElementById("demo").innerHTML = "Sum of array is:- " + sum;
-
         arr.splice(0, arr.length);
         console.log(arr);
-
     </script>
 </body>
 
