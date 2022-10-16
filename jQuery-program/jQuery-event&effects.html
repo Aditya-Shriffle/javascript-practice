@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body>
+    <h1>jQuery Events</h1>
+    <p id="click">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit, corrupti.</p>
+    <button id="btn">click here</button>
+    <p id="dblclick" style="display: none;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente nulla nam perspiciatis laborum voluptate, facere accusamus veniam distinctio delectus corrupti! Impedit, corrupti.</p>
+    <p id="mouseenter">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit, corrupti. Lorem ipsum dolorsit amet.</p>
+    <p id="mouseleave">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit, corrupti. Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, tempore?</p>
+    <h3 id="on">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum, architecto.</h3>
+    <h4 id="hide-show">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex accusamus animi assumenda suscipit explicabo eius cupiditate possimus doloribus sed culpa illo, consequuntur nemo rerum magni eligendi dolores nostrum aspernatur numquam tempora cumque commodi quod ab. Similique dolore dolor aliquid accusantium autem, itaque pariatur molestias, eos laborum dignissimos delectus quas corrupti!</h4>
+    <button id="hide">Hide</button>
+    <button id="show">Show</button>
+    <button id="toggle">toggle</button>
+    <button id="animate">animation</button>
+    <div id="box" style="width: 200px; height: 200px; border: 2px solid; background-color: aqua; position: absolute;"></div>
+    <script>
+        //Click Event
+        $(document).ready(function () {
+            $("#click").click(function () {
+                $(this).hide(2000);
+            });
+        });
+        //dblClick Event
+        $(document).ready(function () {
+            $("#btn").dblclick(function () {
+                $("#dblclick").show(5000);
+            });
+        });
+        //mouseenter Event
+        $(document).ready(function () {
+            $("#mouseenter").mouseenter(function () {
+                $(this).css("background-color", "yellow");
+            });
+        });
+        //mouseleave Event
+        $(document).ready(function () {
+            $("#mouseleave").mouseleave(function () {
+                $(this).css("background-color", "lightgray");
+            });
+        });
+
+        //using the on events
+        $(document).ready(function () {
+            $("#on").on({
+                mouseenter: function () {
+                    $(this).css("background-color", "lightgray");
+                },
+                mouseleave: function () {
+                    $(this).css("background-color", "lightblue");
+                },
+                click: function () {
+                    $(this).css("background-color", "yellow");
+                }
+            });
+        });
+
+        //hide|show effect
+        $(document).ready(function(){
+            $("#hide").click(function(){
+                $("#hide-show").hide(500);
+            });
+            $("#show").click(function(){
+                $("#hide-show").show(500);
+            });
+        });
+
+        //toggle button
+        $(document).ready(function(){
+            $("#toggle").click(function(){
+                $("#hide-show").toggle(1000);
+            });
+        });
+
+        //animate effect
+        $(document).ready(function(){
+            $("#animate").click(function(){
+                $("#box").animate({left: '350px', height: '+=100px', width: '+=100px'});
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+</head>
+<body>
+    <h1>CHnages css using Jquery</h1>
+    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel libero iste deleniti odio cupiditate quis accusantium autem provident officia qui.</div>
+    <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti quasi dolore animi cumque explicabo aut asperiores. Beatae et assumenda recusandae in dicta cum fugiat, amet voluptate odio nostrum ducimus rem non vero aut error libero porro iure id debitis minima expedita doloremque hic. Laboriosam, dolore est eaque placeat aliquid nulla.</div>
+    <button>Click here</button>
+    <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                $("div").css({"background-color": "red","color": "white", "font-size": "25px", "margin": "50px"});
+             });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://www.tutorialspoint.com/jquery/jquery-3.6.0.js"></script>
+
+</head>
+
+<body>
+    <h1>Get & set content using jquery</h1>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <input type="text" id="demo3" value="enter name">
+    <button id="btn1">Click here</button>
+    <button id="btn2">Click here</button>
+    <button id="btn3">Click here</button>
+    <script>
+        $(document).ready(function () {
+            $("#btn1").click(function () {
+                $("#demo1").text("Hello world!");
+                alert("Text: " + $("#demo1").text());
+            });
+            $("#btn2").click(function () {
+                $("#demo2").html("<b>Hello world!</b>");
+                alert("Text: " + $("#demo1").text());
+            });
+            $("#btn3").click(function () {
+                $("#demo3").val("Aditya jain");
+                alert("value: " + $("#demo3").val());
+            });
+        });
+    </script>
+</body>
+
+</html>

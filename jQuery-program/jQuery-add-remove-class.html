@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://www.tutorialspoint.com/jquery/jquery-3.6.0.js"></script>
+    <style>
+        .color{
+            color: red;
+            font-size: 30px;
+        }
+        .position{
+            position: absolute;
+            right: 0;
+            bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Add - remove class using jQuery </h1>
+    <div class="demo">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium, voluptate.</div>
+    <div class="demo1">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, nemo. Praesentium, voluptate.</div> <br>
+    <button class="btn">Click here for add class</button> <br><br>
+    <button class="btn1">Click here for remove class</button> <br><br>
+    <button class="btn2">Click here for toggle class</button>
+    <script>
+        $(document).ready(function () {
+            $(".btn").click(function () {
+                $(".demo").addClass("color");
+                $(".demo1").addClass("position");
+            });
+        });
+        $(document).ready(function () {
+            $(".btn1").click(function () {
+                $(".demo").removeClass("color");
+                $(".demo1").removeClass("position");
+            });
+        });
+        $(document).ready(function () {
+            $(".btn2").click(function () {
+                $(".demo").toggleClass("color");
+                $(".demo1").toggleClass("position");
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://www.tutorialspoint.com/jquery/jquery-3.6.0.js"></script>
+    <style>
+        div{
+            border: 2px solid gray;
+            width: 200px;
+            height: 200px;
+            background-color: yellow;
+            padding: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Remove content using jquery</h1>
+    <div id="demo">
+        <li>lorem10</li>
+        <li>lorem101</li>
+        <li>lorem103</li>
+        <li>lorem104</li>
+        <li>lorem105</li>
+    </div>
+    <button id="btn1">Click here</button>
+    <button id="btn11">Click here</button>
+    <script>
+        $(document).ready(function () {
+            $("#btn1").click(function () {
+                $("#demo").remove();
+            });
+        });
+        $(document).ready(function () {
+            $("#btn11").click(function () {
+                $("#demo").empty();
+            });
+        });
+    </script>
+</body>
+
+</html>

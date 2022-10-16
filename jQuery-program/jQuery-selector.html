@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a{
+            border: 2px solid gray;
+            border-radius: 8px;
+            padding: 5px 8px;
+            display: inline-block;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>jQuery selector</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate, quos!</p>
+    <h5 class="demo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, perferendis. Esse enim error porrovoluptas similique a rerum, consectetur aut.</h5>
+    <h6 id="iddemo">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit dolore ipsa fugiat voluptatibus magnam quas nisi distinctio asperiores, voluptate laborum labore assumenda aliquid facilis quia, eumodio suscipit culpa?</h6> <br>
+    <button>Click here</button> <br>
+    <a>Click for paragraph hide</a>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        //This selector
+        $(document).ready(function () {
+            $("button").click(function () {
+                $(this).hide();
+            });
+        });
+
+        //Tag selector
+        $(document).ready(function () {
+            $("a").click(function () {
+                $("p").hide();
+            });
+        });
+        //class selector
+        $(document).ready(function () {
+            $("h5").click(function () {
+                $(".demo").hide();
+            });
+        });
+        //id selector
+        $(document).ready(function () {
+            $("h6").click(function () {
+                $("#iddemo").hide();
+            });
+        });
+    </script>
+</body>
+
+</html>
