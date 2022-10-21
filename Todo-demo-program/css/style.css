@@ -1,0 +1,62 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-image: url("../img/todo.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.main-box {
+    width: 500px;
+    margin-top: 50px;
+}
+
+#myInput {
+    width: 80%;
+    padding: 7px 15px;
+    border-radius: 10px;
+    border: 2px solid gray;
+}
+
+.add-btn {
+    width: 19%;
+    border-radius: 10px;
+    padding: 7px 0px;
+}
+
+.complete{
+    text-decoration: line-through;
+    color: red;
+}
+
+.delete {
+    color: red;
+    border-radius: 10px;
+    padding: 5px 15px;
+    background-color: white;
+    text-decoration: none;
+}
+
+.delete:hover {
+    color: white;
+    background-color: red;
+}
+
+.task {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    padding: 5px 0px 5px 20px;
+    background-color: white;
+    color: black;
+}
+
+.tasklist{
+    width: 200px;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+}
