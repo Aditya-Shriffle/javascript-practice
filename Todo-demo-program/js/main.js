@@ -1,5 +1,5 @@
 let addedTask = "nothing";
-let input = getTodoData();
+let inputTask = getTodoData();
 
 selectData();
 function todoListData() {
@@ -9,16 +9,16 @@ function todoListData() {
 		alert('Please enter your task');
 	} else {
 		if (addedTask == 'nothing') {
-			if (input == null) {
+			if (inputTask == null) {
 				let data = [myInput];
 				setTodoData(data);
 			} else {
-				input.push(myInput);
-				setTodoData(input);
+				inputTask.push(myInput);
+				setTodoData(inputTask);
 			}
 		} else {
-			input[addedTask] = myInput;
-			setTodoData(input);
+			inputTask[addedTask] = myInput;
+			setTodoData(inputTask);
 		}
 		document.getElementById('myInput').value = '';
 		selectData();
@@ -26,14 +26,14 @@ function todoListData() {
 }
 
 function selectData() {
-	if (input != null) {
+	if (inputTask != null) {
 		let taskDetails = '';
-		for (let i in input) {
+		for (let i in inputTask) {
 			taskDetails += `<div class="d-flex task">
-								<div class="tasklist d-flex align-items-center" id="taskdata" onclick="completeData()">${input[i]}</div>
+								<div class="tasklist d-flex align-items-center" id="taskdata" onclick="completeData()">${inputTask[i]}</div>
 								<div>
-								<a class="delete" href="javascript:void(0)" onclick="editData(${i})">Edit</a>
-								<a class="delete" href="javascript:void(0)" onclick="deleteData(${i})">Delete</a>
+								<a class="delete" href="javascript:void(0)" onclick="editData(${i})"><i class="fa-solid fa-pen-to-square"></i></a>
+								<a class="delete" href="javascript:void(0)" onclick="deleteData(${i})"><i class="fa-solid fa-trash-can"></i></a>
 								</div>
 							</div>`;
 		}
@@ -48,20 +48,20 @@ function completeData() {
 
 function editData(index) {
 	addedTask = index;
-	document.getElementById('myInput').value = input[index];
+	document.getElementById('myInput').value = inputTask[index];
 }
 
 function deleteData(index) {
-	input.splice(index, 1);
-	setTodoData(input);
+	inputTask.splice(index, 1);
+	setTodoData(inputTask);
 	selectData();
 }
 
 function getTodoData() {
-	let input = JSON.parse(localStorage.getItem('ToDo-Data'));
-	return input;
+	let inputTask = JSON.parse(localStorage.getItem('ToDo-Data'));
+	return inputTask;
 }
 
-function setTodoData(input) {
-	localStorage.setItem('ToDo-Data', JSON.stringify(input));
+function setTodoData(inputTask) {
+	localStorage.setItem('ToDo-Data', JSON.stringify(inputTask));
 }

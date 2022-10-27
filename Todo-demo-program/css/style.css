@@ -38,9 +38,11 @@ body {
 .delete {
     color: red;
     border-radius: 10px;
-    padding: 5px 15px;
+    padding: 5px 10px;
     background-color: white;
     text-decoration: none;
+    border: 1px solid;
+    display: none;
 }
 
 .delete:hover {
@@ -53,14 +55,18 @@ body {
     justify-content: space-between;
     margin: 10px;
     border: 1px solid lightgray;
-    border-radius: 10px;
-    padding: 10px 0px 10px 20px;
+    border-radius: 12px;
+    padding: 10px 5px 10px 20px;
     background-color: white;
     color: rgb(30, 30, 30);
     width: 80%;
     margin-inline: auto;
     font-size: 15px;
     font-weight: 500;
+}
+
+.task:hover .delete{
+    display: initial;
 }
 
 .tasklist{
