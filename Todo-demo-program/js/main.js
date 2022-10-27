@@ -1,4 +1,4 @@
-let addedTask = "no";
+let addedTask = "nothing";
 selectData();
 function todoListData() {
 	let myInput = document.getElementById('myInput').value;
@@ -6,8 +6,7 @@ function todoListData() {
 	if (myInput == '') {
 		alert('Please enter your task');
 	} else {
-		console.log(addedTask);
-		if (addedTask == 'no') {
+		if (addedTask == 'nothing') {
 			let input = getTodoData();
 			if (input == null) {
 				let data = [myInput];
@@ -32,21 +31,21 @@ function selectData() {
 		let taskDetails = '';
 		for (let i in input) {
 			taskDetails += `<div class="d-flex task">
-								<div class="tasklist" id="taskdata">${input[i]}</div>
-								<div>
-									<a class="delete" href="javascript:void(0)" onclick="editData(${i})">Edit</a>
-									<a class="delete" href="javascript:void(0)" onclick="deleteData(${i})">Delete</a>
-								</div>
-							</div>`;
+                        <div class="tasklist d-flex align-items-center" id="taskdata">${input[i]}</div>
+                        <div>
+                          <a class="delete" href="javascript:void(0)" onclick="editData(${i})">Edit</a>
+                          <a class="delete" href="javascript:void(0)" onclick="deleteData(${i})">Delete</a>
+                        </div>
+                      </div>`;
 		}
 		document.getElementById('taskData').innerHTML = taskDetails;
 	}
 
 }
+
 document.getElementById("taskdata").addEventListener("click", completeTask);
 function completeTask() {
-	let element = document.getElementById("taskdata");
-	element.classList.toggle("complete");
+	this.classList.toggle("complete");
 }
 
 function editData(index) {

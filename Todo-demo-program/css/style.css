@@ -8,22 +8,25 @@ body {
     background-attachment: fixed;
 }
 
-.main-box {
-    width: 500px;
-    margin-top: 50px;
+.mt-100 {
+    margin-top: 100px;
 }
 
 #myInput {
-    width: 80%;
-    padding: 7px 15px;
+    width: 100%;
+    padding: 12px 15px;
     border-radius: 10px;
     border: 2px solid gray;
 }
 
 .add-btn {
-    width: 19%;
     border-radius: 10px;
     padding: 7px 0px;
+    width: 150px;
+    margin-inline: auto;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
 }
 
 .complete{
@@ -50,9 +53,13 @@ body {
     margin: 10px;
     border: 1px solid lightgray;
     border-radius: 10px;
-    padding: 5px 0px 5px 20px;
+    padding: 10px 0px 10px 20px;
     background-color: white;
-    color: black;
+    color: rgb(30, 30, 30);
+    width: 80%;
+    margin-inline: auto;
+    font-size: 15px;
+    font-weight: 500;
 }
 
 .tasklist{
