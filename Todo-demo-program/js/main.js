@@ -43,6 +43,11 @@ function selectData() {
 	}
 
 }
+document.getElementById("taskdata").addEventListener("click", completeTask);
+function completeTask() {
+	let element = document.getElementById("taskdata");
+	element.classList.toggle("complete");
+}
 
 function editData(index) {
 	addedTask = index;
