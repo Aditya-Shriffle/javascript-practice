@@ -2,6 +2,7 @@ let addedTask = "no";
 selectData();
 function todoListData() {
 	let myInput = document.getElementById('myInput').value;
+	window.location.reload();
 	if (myInput == '') {
 		alert('Please enter your task');
 	} else {
