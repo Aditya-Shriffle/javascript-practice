@@ -13,7 +13,8 @@ body {
 }
 
 #myInput {
-    width: 100%;
+    width: 80%;
+    text-align: center;
     padding: 12px 15px;
     border-radius: 10px;
     border: 2px solid gray;
@@ -66,4 +67,6 @@ body {
     width: 200px;
     -webkit-line-clamp: 1;
     overflow: hidden;
+    cursor: pointer;
 }
+

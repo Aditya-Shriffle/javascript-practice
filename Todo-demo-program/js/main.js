@@ -31,7 +31,7 @@ function selectData() {
 		let taskDetails = '';
 		for (let i in input) {
 			taskDetails += `<div class="d-flex task">
-                        <div class="tasklist d-flex align-items-center" id="taskdata">${input[i]}</div>
+                        <div class="tasklist d-flex align-items-center" id="taskdata" onclick="completeData()">${input[i]}</div>
                         <div>
                           <a class="delete" href="javascript:void(0)" onclick="editData(${i})">Edit</a>
                           <a class="delete" href="javascript:void(0)" onclick="deleteData(${i})">Delete</a>
@@ -43,9 +43,8 @@ function selectData() {
 
 }
 
-document.getElementById("taskdata").addEventListener("click", completeTask);
-function completeTask() {
-	this.classList.toggle("complete");
+function completeData() {
+	document.getElementById("taskdata").classList.toggle("complete");
 }
 
 function editData(index) {
