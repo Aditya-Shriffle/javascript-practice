@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Libre+Caslon+Text&family=Open+Sans:wght@300&display=swap');
+
+
+body{
+    margin: 0;
+    min-height: 100%;
+    background-color: #fff;
+    font-family: 'Open Sans',sans-serif;
+    color: #161a25;
+    font-size: 15px;
+    line-height: 24px;
+}
+p{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    color: #525b73;
+}
+.img-invert{
+    -webkit-filter: invert(100%);
+    filter: invert(100%);
+}
+.overlay{
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    background-color: #0000006a;
+}
+.btn-common{
+    background-color: #faa22a!important;
+    color: white!important;
+    font-size: 13px!important;
+    padding: 10px 25px!important;
+    height: 100%;
+    cursor: pointer;
+}
+.btn-common:hover{
+    background-color: #f79814!important;
+}
+.bottom-line{
+    width: 40px;
+    height: 4px;
+    margin-top: 10px;
+    margin-bottom: 24px;
+    background-color: #faa22a;
+    margin-inline: auto;
+}
+.navbar{
+    padding: 20px!important;
+    position: absolute!important;
+    top: 0;
+    width: 100%;
+}
+.navbar-collapse{
+    flex-grow: 0!important;
+}
+.nav-link{
+    font-size: 13px!important;
+    font-style: normal;
+    font-weight: 500!important;
+    padding: 10px!important;
+    margin-inline: 5px!important;
+    color: white!important;
+}
+.nav-link:active,
+.nav-link:hover{
+    color: white!important;
+    border-bottom: 2px solid #faa22a;
+}
+.hiring-badge{
+    position: relative;
+}
+.hiring-badge .badge{
+    position: absolute;
+    top: -6px;
+    right: 10px;
+    background-image: linear-gradient(180deg,#f437a8,#ff2f5b);
+}
+.home-page{
+    background-image: url("../img/img2.png");
+    background-size: cover;
+    position: relative;
+    z-index: 0;
+}
+.header-content{
+    padding-top: 170px;
+    padding-bottom: 140px;
+}
+.header-content h1{
+    font-family: 'Kaushan Script', cursive;
+    color: #fff;
+    font-size: 60px;
+    line-height: 65px;
+    text-align: center;
+}
+.header-content h2{
+    font-family: 'Libre Caslon Text', serif;
+    font-size: 23px;
+    color: white;
+    line-height: 35px;
+    text-align: center;
+}
+.header-content-button{
+    text-align: center;
+}
+.header-content-link{
+    text-align: center;
+}
+.header-content-link a img{
+    margin: 10px;
+}
+
+.slide-section{
+    height: 100px;
+    background-image: linear-gradient(135deg,#faa22a,#ff4dae);
+}
+.marquee-content{
+    display: flex;
+    height: 100px;
+    align-items: center;
+}
+.marquee-content span{
+    padding: 45px;
+    color: white;
+    font-weight: 900;
+    font-size: 25px;
+}
+
+.meet-section{
+    padding: 100px 200px;
+}
+.meet-heading{
+    font-family: 'Libre Caslon Text', serif;
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.team-section{
+    padding: 100px 20px;
+}
+.team-heading{
+    font-family: 'Libre Caslon Text', serif;
+    font-size: 40px;
+    font-weight: 600;
+}
+.team{
+    margin-left: 0!important;
+    margin-right: 0!important;
+}
+.team .col-lg-6{
+    box-shadow: 2px 2px 20px #80808052;
+    height: 400px;
+    padding: 20px;
+    position: relative;
+}
+.team a:hover{
+    transform: scale(0.998);
+    transition: linear;
+}
+.team a:hover .team-btn{
+    top: 48%;
+    transition: linear .2s;
+}
+.team img{
+    width: 100%;
+    height: 100%;
+}
+.team-btn{
+    position: absolute;
+    top: 50%;
+    left: 35%;
+    padding: 10px 28px!important;
+    border-radius: 5px!important;
+    background-image: linear-gradient(135deg,#ff9f2e,#f723c4);
+    color: #fff!important;
+}
+
+.story-section .bottom-line{
+    margin-inline: unset;
+}
+.story-heading{
+    font-family: 'Libre Caslon Text', serif;
+    font-size: 40px;
+    font-weight: 600;
+}
+.story-content{
+    padding-left: 120px!important;
+    padding-right: 120px!important;
+}
+.Sparkerl img{
+    width: 100%;
+    height: 350px;
+    border-radius: 10px;
+}
+.circle-yellow{
+    position: absolute;
+    width: 450px;
+    height: 450px;
+    border-radius: 50%;
+    background-color: #ff9f2e;
+    z-index: -1;
+}
+
+.review_section {
+    padding: 100px 0px 0 0;
+}
+.review-heading{
+    font-family: 'Libre Caslon Text', serif;
+    font-size: 40px;
+    font-weight: 600;
+}
+.review_section .owl-carousel .item {
+    margin: 15px;
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 2px 2px 20px lightgray;
+}
+.review_section .owl-carousel .item i::before {
+    color: #5e666d;
+}
+.review_section .owl-carousel .item h3{
+    font-family: 'Libre Caslon Text', serif;
+    font-size: 25px;
+    font-weight: 600;
+}
+.review_section .owl-carousel .item h4{
+    font-family: 'Libre Caslon Text', serif;
+    font-size: 16px;
+    font-weight: 600;
+}
+.review_section .test_img {
+    width: 100px !important;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.review_section .owl-carousel .owl-nav{
+    text-align: center;
+}
+.review_section .owl-carousel .owl-nav button.owl-next span,
+.review_section .owl-carousel .owl-nav button.owl-prev span{
+    font-size: 60px;
+    margin-inline: 20px;
+    color: rgb(0, 0, 0);
+}
+
+.map-section{
+    padding: 100px 0px;
+}
+.map-heading{
+    font-family: 'Libre Caslon Text', serif;
+    font-size: 24px;
+    font-weight: 600;
+    color: #7c8499;
+}
+
+.crew-section{
+    padding: 0px 20px 100px 20px;
+}
+.crew-heading{
+    font-family: 'Libre Caslon Text', serif;
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.help-section{
+    height: 100px;
+    background-image: linear-gradient(135deg,#faa22a,#ff4dae);
+}
+.help-heading{
+    font-family: 'Libre Caslon Text', serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 0;
+}
+.btn-help{
+    background-color: #ffffff!important;
+    color: rgb(0, 0, 0)!important;
+    font-size: 13px!important;
+    padding: 10px 25px!important;
+    cursor: pointer;
+    margin-left: 20px;
+}
