@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array methods</title>
+</head>
+<body>
+    <h1>Methods of Array:-</h1>
+    <script>
+        let myArray = [1, 2, 54, 83, 90, 3];
+        //delete method
+        let a = delete myArray[0];
+        console.log(a);                //return true/false
+        console.log(myArray);          //length of array not change, that place is empty
+
+        //concat method:- merge two or more array
+        let b = [1, 3, 5, 7, 9];
+        let c = [2, 4, 6, 8,];
+        let d = b.concat(c);           // merge two array
+        console.log(d);
+        let e = [12, 34, 65];
+        let f = b.concat(c, e);        // merge three array
+        console.log(f);
+        let g = [25, 74, 838];
+        console.log(b.concat(c, e, g));     // merge four array
+
+        //sort method :- sorting the array
+        let myInput = [12, 87, 98, 456, 3, 87, 23, 0];
+        let h = myInput.sort();            
+        console.log(myInput);
+
+        compare = (a, b) => a - b;            //arrow function
+        let i = myInput.sort(compare);
+        console.log(i);
+
+        let myFruits = ["banana", "mango", "apple"];
+        console.log(myFruits.sort());
+        console.log(myFruits.reverse());       // Reverse the existing array
+
+        //splice method
+        let myDetails = ["aditya", 45, 76, 1234, "indore", true];
+        let j = myDetails.splice(2, 5, 23, 12345, "banana");
+        console.log(j);                    //return eliminated element
+        console.log(myDetails)             //return remaining element and adding element, change existing array
+
+        //Slice method
+        let myValue = [12, 87, 98, 456, 3, 87, 23, 0];
+        let k = myValue.slice(2);          //return 2nd index to remaining
+        let l = myValue.slice(2, 5);       //return 2nd index to 5th index
+        console.log(k);                   
+        console.log(l);                   
+        console.log(myValue);             //Return original array
+
+    </script>
+</body>
+</html>

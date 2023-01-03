@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String methods</title>
+</head>
+<body>
+    <h1>String methods:-</h1>
+    <script>
+        let name = "Aditya";
+        console.log(name.length);                       //return length of string
+
+        console.log(name.toUpperCase());                //convert string into upper case
+
+        console.log(name.toLowerCase());                //convert string into lower case
+
+        console.log(name.replace("Aditya", "Aytida"));                //replace string
+
+        let place = "Sagar";
+        console.log(name.concat(" is my name.", " my hometown is ", place));      //merging string
+
+        let city = "     Bhopal      ";
+        console.log(city);
+        console.log(city.trim());                       //remove whitespaces from start and end 
+
+        console.log(name.split());                      //Convert string into Array
+
+        console.log(name.slice(2, 4));                  //Slice method:- return 2nd index to 4th index
+        console.log(name.slice(2));                     //Slice method:- return 2 to end index value
+
+        console.log(name.repeat(10));                   //Repeat any string in multiple times
+
+        console.log(name.match("dit"));                 //Match string to input string
+
+    </script>
+</body>
+</html>

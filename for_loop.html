@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For loop programs</title>
+</head>
+
+<body>
+    <script>
+        //Write a program to print 0 to 9
+        for (let i = 0; i < 10; i++) {
+            console.log("value of i is:-", i);
+        }
+
+        //Write a program to print 0 to input value
+        let value = prompt("Enter a number");
+        console.log("Input value is:-", value);
+        for (let i = 0; i < value; i++) {
+            console.log("value of i is:-", i);
+        }
+
+        //Write a program to print sum of input number
+        let sum = 0;
+        let input = prompt("Enter a number");
+        for (let i = 0; i <= input; i++) {
+            sum += i;
+        }
+        console.log("Total sum:-", sum);
+
+        // Write a program of for in loop
+        let marks = { "aditya": "85", "aman": "95", "arpit": "75", "anurag": "65" }
+        console.log(marks);
+        for (let keys of marks) {
+            console.log(`Marks of ${keys} is = ${marks[keys]}`);
+        }
+
+        //Write a program of for in loop
+        let element = ["aditya", "aman", "arpit", "anurag"];
+        console.log(element);
+        for (let index in element) {
+            console.log(`Element of ${index} is = ${element[index]}`);
+        }
+    </script>
+</body>
+
+</html>

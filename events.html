@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events in Javascript</title>
+</head>
+<body>
+    <div class="container">
+        <h3>Click on button for click event:-</h3> <br>
+        <button onclick="prompt('Enter your favorite color:')">Click me</button> <br><br>
+        <button onclick="myFunction();">Click for multiple</button> <br><br>
+        <button onmouseenter="colorChange();">Mouseenter for different color</button> <br><br>
+        <div id="colorchange">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatibus laborum minima quis natus eveniet consequatur distinctio sed repellat aliquam ut, porro asperiores fugit fuga possimus, fugiat officia. Neque temporibus, repudiandae libero dolores soluta minima at ut asperiores reprehenderit velit ratione ex tempora perferendis laborum minus, atque aspernatur facilis vitae consequatur.</div> <br>
+        <button onmouseleave="colorChangeAgain();">Mouse for different color</button> <br><br>
+    </div>
+    <script>
+        function myFunction() {
+            let a = parseInt(prompt("enter 1st number:", "12345"));
+            let b = parseInt(prompt("enter 2nd number:", "12345"));
+            let c = a*b;
+            console.log(`The value of ${a} * ${b} is: `, c);
+        }
+
+        function colorChange() {
+            let a = document.getElementById("colorchange");
+            a.style.color = "red";
+        }
+        
+        function colorChangeAgain() {
+            let a = document.getElementById("colorchange");
+            a.style.color = "black";
+        }
+
+        document.getElementById("colorchange").addEventListener("click", function myValue(){
+            let a = confirm("Don't click");
+            if(a == true){
+            document.getElementById("colorchange").removeEventListener("click", myValue);
+            }
+        });
+
+    </script>
+</body>
+</html>

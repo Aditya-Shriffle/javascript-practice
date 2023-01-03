@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions</title>
+</head>
+
+<body>
+    <script>
+        // Write a program for functions
+        let first_input = prompt("Enter 1st value:");
+        console.log("First value is:- ", first_input);
+        let second_input = prompt("Enter 2nd value:");
+        console.log("Second value is:- ", second_input);
+        myFunction();
+
+        function myFunction() {
+            console.log(first_input + second_input);    //Here input value is a string
+            console.log(parseInt(first_input) + parseInt(second_input));      //Here input value is a number
+        }
+
+        // Write a program for functions with return value
+        let input1 = parseInt(prompt("Enter first number: "));
+        let input2 = parseInt(prompt("Enter second number: "));
+        let sum = add(input1, input2);
+        console.log("Sum of input value is", sum);
+
+        function add(a, b) {
+            return a + b;
+        }
+
+        // Write a program for functions with return value
+        console.log("Multiple of that value is:- ", myFun(4, 3));
+        function myFun(p1, p2) {
+            return p1 * p2;
+        }
+    </script>
+</body>
+
+</html>

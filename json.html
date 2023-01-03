@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local storage</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Save data to local storage using JSON methods:-</h1>
+    </div>
+    <script>
+        //input data in object
+        let myDetails = {
+            name : "Aditya",
+            age : 26,
+            place : "indore",
+            friend : "Aman"
+        }
+        console.log(myDetails);
+
+        //input data saved in localStorage in json string
+        localStorage.setItem("myData", JSON.stringify(myDetails));
+        console.log(localStorage.getItem("myData"));
+
+        //input data get from localStorage in js object
+        let getData = JSON.parse(localStorage.getItem("myData"));
+        console.log(getData);
+    </script>
+</body>
+</html>

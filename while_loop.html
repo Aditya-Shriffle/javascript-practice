@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>While and Do while loop</title>
+</head>
+
+<body>
+    <script>
+        // //Write a program to print number from 0 to input 
+        let input = prompt("Enter a number");
+        let i = 0;
+        while(i<input){
+            console.log(i);
+            i++;
+        }
+        
+        //Write a program to print number from 0 to input 
+        let value = prompt("Enter a number");
+        let j = 5;
+        do {
+            console.log("Value of j", j);
+            j++;
+        }
+        while(j<value);
+        
+        //Write a program to print number from 0 to input 
+        let input_value = prompt("Enter a number");
+        let k = 5;
+        do {
+            console.log("input_value of k", k);
+            k++;
+        }
+        while(k<input_value) {
+            if(input_value<k) {
+                console.log(`input_value ${input_value} is smaller than 5, please enter greater value`);
+            }
+        };
+    </script>
+</body>
+
+</html>

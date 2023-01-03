@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array methods</title>
+</head>
+<body>
+    <h1>Methods of Array:-</h1>
+    <script>
+        let myArray = [1, 2, 54, 83, 90, 3];
+        console.log(typeof myArray);
+        //Convert into string
+        let a = myArray.toString();
+        console.log(a, typeof a);
+
+        //Convert into string using join methods 
+        let b = myArray.join(" and ");
+        let c = myArray.join("_");
+        console.log(b, typeof b);
+        console.log(c, typeof c);
+
+        //remove last element using pop method, its changed the existing array
+        let d = myArray.pop();
+        console.log(d);                  //its show only eliminated element
+        console.log(myArray);            //remaining elements
+
+        //Add a new element in the last position of that array
+        let e = myArray.push(56);
+        console.log(e);                  // its return a new array length
+        console.log(myArray);            // show new array with pushing element
+
+        //remove first element using shift method, its changed the existing array
+        let f = myArray.shift();
+        console.log(f);                  //its show only eliminated element
+        console.log(myArray);            //remaining elements
+
+        //Add a new element in the first position of that array
+        let g = myArray.unshift(56);
+        console.log(g);                  // its return a new array length
+        console.log(myArray);            // show new array with pushing element
+    </script>
+</body>
+</html>

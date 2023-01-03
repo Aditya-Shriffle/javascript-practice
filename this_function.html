@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This keyword</title>
+</head>
+
+<body>
+    <script>
+        // Write a program for this keyword:- refers to object it belongs to
+        console.log(this);                          //refer to window object
+        myFunction();                               //refer to window object
+        function myFunction(){
+            console.log(this);
+        }
+        let details = { name : "Aditya", age : "26", place : "indore",
+                        sum : function(){
+                            console.log(this);      // refer to parent object
+                            console.log(this.name);
+                        }
+                      };
+        details.sum();
+
+    </script>
+</body>
+
+</html>

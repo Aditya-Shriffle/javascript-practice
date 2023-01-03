@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local storage</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Save data to local storage:-</h1>
+    </div>
+    <script>
+        let key = prompt("Enter your key input");
+        let value = prompt("Enter the value of key");
+
+        //set input to localStorage
+        localStorage.setItem(key, value);
+
+        //get input from localStorage
+        let input_name = localStorage.getItem(key);
+        console.log(input_name);
+
+        //remove any data from localStorage
+        if(key == "place"){
+            localStorage.removeItem(key);
+        }
+
+        //clear all data from localStorage
+        if(key == 0){
+            localStorage.clear();
+        }
+
+        document.write(localStorage.key(0), "<br>");
+        document.write(localStorage.key(1), "<br>");
+        document.write(localStorage.key(2), "<br>");
+        document.write(localStorage.key(3));
+    </script>
+</body>
+</html>
