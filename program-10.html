@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sum of two number</title>
+    <style>
+        body{
+            text-align: center;
+        }
+        #input1,
+        #input2,
+        button {
+            border-radius: 10px;
+            padding: 10px;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Write a JavaScript program to compute the sum of the two given integers. If the two values are same, then returns triple their sum</h2>
+    <div>
+        <label for="input1">Enter first number:</label>
+        <input type="number" placeholder="Enter first number" id="input1">
+    </div>
+    <div>
+        <label for="input2">Enter second number:</label>
+        <input type="number" placeholder="Enter second number" id="input2">
+    </div> <br>
+    <div>
+        <button onclick="sum()">Click here</button>
+    </div>
+    <h1>-:Result:-</h1>
+    <div id="output"></div>
+
+    <script>
+        function sum() {
+            let number1 = document.getElementById("input1").value;
+            let number2 = document.getElementById("input2").value;
+            if (number1 == "" || number2 == "") {
+                document.getElementById("output").innerHTML = "Please enter both value";
+            } else {
+                if (number1 != number2) {
+                    let sum = parseInt(number1) + parseInt(number2);
+                    document.getElementById("output").innerHTML = "The sum of " + number1 + "and " + number2 + " is " + sum;
+                } else {
+                    let sum = (parseInt(number1) + parseInt(number2)) * 3;
+                    document.getElementById("output").innerHTML = "The triple of sum of " + number1 + " and " + number2 + " is " + sum;
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

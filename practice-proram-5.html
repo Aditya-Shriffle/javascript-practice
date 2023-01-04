@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Match random number with input value</title>
+</head>
+<body>
+    <h2>WAP where the program takes a random integer between 1 to 10, the user is then prompted to input a guess number</h2>
+    
+    <script>
+        let number = Math.round(Math.random() * 10);
+        console.log(number);
+        let inputNumber = prompt("Enter a number between 1 to 10");
+        if(number == inputNumber) {
+            console.log(inputNumber, "Matched with random number", number);
+        } else {
+            console.log(inputNumber, "Not Matched with random number", number)
+        }
+    </script>
+</body>
+</html>

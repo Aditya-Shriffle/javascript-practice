@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WAP to get today date:</title>
+</head>
+
+<body>
+    <h2>Ques: Write a JavaScript program to display the current day and time:-</h2>
+    <h4 id="todayDate"></h4>
+    <br><br>
+
+    <h2>Ques: Write a JavaScript program to print the contents of the current window:-</h2>
+    <button onclick="printScreen()">Click for print</button>
+    <br><br><br>
+
+    <h2>Ques: Write a JavaScript program to get the current date in dd-mm-yyyy format:-</h2>
+    <h4 id="currentDate"></h4>
+    <script>
+        let TodayDate = new Date();
+        document.getElementById("todayDate").innerHTML = "Today date is: " + TodayDate;
+        document.getElementById("todayDate").style.color = "red";
+
+        function printScreen() {
+            window.print();
+        }
+
+        let today = new Date();
+        let dd = today.getDate();
+        let mm = today.getMonth() + 1;
+        let yyyy = today.getFullYear();
+        today = dd + "-" + mm + "-" + yyyy;
+        document.getElementById("currentDate").innerHTML = "Today date is: " + today;
+        document.getElementById("currentDate").style.color = "blue";
+    </script>
+</body>
+
+</html>

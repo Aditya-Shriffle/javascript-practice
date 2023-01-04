@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check number is either 50 or not</title>
+    <style>
+        body{
+            text-align: center;
+        }
+        #input1,
+        #input2,
+        button {
+            border-radius: 10px;
+            padding: 10px;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Write a JavaScript program to check two given numbers and return true if one of the number is 50 or if their sum is 50</h2>
+    <div>
+        <label for="input1">Enter first number:</label>
+        <input type="number" placeholder="Enter first number" id="input1">
+    </div>
+    <div>
+        <label for="input2">Enter second number:</label>
+        <input type="number" placeholder="Enter second number" id="input2">
+    </div> <br>
+    <div>
+        <button onclick="checkNumber()">Click here</button>
+    </div>
+    <h1>-:Result:-</h1>
+    <div id="output"></div>
+
+    <script>
+        function checkNumber() {
+            let number1 = parseInt(document.getElementById("input1").value);
+            let number2 = parseInt(document.getElementById("input2").value);
+            if (number1 == "" || number2 == "") {
+                document.getElementById("output").innerHTML = "Please enter both value";
+            } else {
+                if (number1 == 50 || number2 == 50 || (number1+number2) == 50) {
+                    document.getElementById("output").innerHTML = "True"
+                } else {
+                    document.getElementById("output").innerHTML = "False"
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

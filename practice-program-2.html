@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tringle area</title>
+</head>
+
+<body>
+    <h2>Write a JavaScript program to find the area of a triangle where lengths of the three of its sides are 5, 6,
+        7:-
+    </h2>
+    <button onclick="areaTringle()">Click here</button>
+    <h1 id="area"></h1>
+    <script>
+        function areaTringle() {
+            let a = 5;
+            let b = 6;
+            let c = 7;
+            let s = (a + b + c)/2;
+            let area = Math.sqrt(s*((s-a)*(s-b)*(s-c)));
+            document.getElementById("area").innerHTML = "Area of tringle is: " + area;
+        }
+    </script>
+</body>
+
+</html>

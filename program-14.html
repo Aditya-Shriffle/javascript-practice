@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change text position in any string</title>
+</head>
+
+<body>
+    <h2>Write a JavaScript program to create a new string from a given string changing the position of first and last characters. The string length must be greater than or equal to 1</h2>
+    <button onclick="checkNumber()">Click now</button>
+    <script>
+        function checkNumber() {
+            let str = prompt("Enter a string");
+            let newString = str.slice(1, str.length-1);
+            console.log(str);
+            console.log(str.charAt(str.length-1) + newString + str.charAt(0));
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diffrence between input and 13</title>
+    <style>
+        body{
+            text-align: center;
+        }
+        #input,
+        button {
+            border-radius: 10px;
+            padding: 10px;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Write a JavaScript program to get the difference between a given number and 13, if the number is greater than 13
+        return double the absolute difference.</h2>
+    <div>
+        <label for="input">Enter number:</label>
+        <input type="number" placeholder="Enter a number" id="input">
+    </div> <br>
+    <div>
+        <button onclick="diffrence()">Click here</button>
+    </div>
+    <h1>-:Result:-</h1>
+    <div id="output"></div>
+
+    <script>
+        function diffrence() {
+            let number = document.getElementById("input").value;
+            if (number == "") {
+                document.getElementById("output").innerHTML = "Please enter a number";
+            } else {
+                if (number <= 13) {
+                    let diff = 13 - number;
+                    document.getElementById("output").innerHTML = "The diffrence between 13 and " + number + " is " + diff;
+                } else {
+                    let diff = (number - 13) * 2;
+                    document.getElementById("output").innerHTML = "The double of diffrence between 13 and " + number + " is " + diff;
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

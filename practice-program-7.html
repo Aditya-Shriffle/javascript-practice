@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Celsius & Fahrenheit conversion</title>
+    <style>
+        body {
+            text-align: center;
+        }
+        #input,
+        button {
+            padding: 10px;
+            color: black;
+            background-color: lightgray;
+            margin: 10px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Write a JavaScript program to convert temperatures to and from Celsius, Fahrenheit</h2>
+    <div>
+        <label for="input">Enter Temperature:-</label>
+        <input type="number" placeholder="Enter temperature" id="input">
+    </div>
+    <div>
+        <button onclick="celTofah()">convert to fahrenheit</button>
+        <button onclick="fahTocel()">convert to celsius</button>
+    </div>
+    <h1>-:Result:-</h1>
+    <div id="output1"></div>
+    <div id="output2"></div>
+    <script>
+        function celTofah() {
+            let c = document.getElementById("input").value;
+            if(c == "") {
+            document.getElementById("output1").innerHTML = "Please firstly enter value";
+            } else {
+                let f = ((c * 9) / 5) + 32;
+                document.getElementById("output1").innerHTML = c + " in fahrenheit is " + f;
+            }
+        }
+        function fahTocel() {
+            let f = document.getElementById("input").value;
+            if(f == "") {
+            document.getElementById("output2").innerHTML = "Please firstly enter value";
+            } else {
+                let c = ((f - 32) * 5) / 9;
+                document.getElementById("output2").innerHTML = f + " in celcius is " + c;
+            }
+        }
+    </script>
+</body>
+</html>

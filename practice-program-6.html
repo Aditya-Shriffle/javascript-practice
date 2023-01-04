@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator with valid input</title>
+    <style>
+        body {
+            text-align: center;
+        }
+        #first,
+        #second,
+        button {
+            padding: 10px;
+            color: black;
+            background-color: lightgray;
+            margin: 10px;
+            border-radius: 10px;
+        }
+        #first:hover,
+        #second:hover,
+        button:hover,
+        #first:focus,
+        #second:focus,
+        button:focus {
+        background-color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Write a JavaScript program to calculate multiplication and division of two numbers and also add validation for
+        input:</h2>
+    <div>
+        <label for="first">First value:</label>
+        <input type="number" placeholder="Enter first number" id="first">
+    </div>
+    <div>
+        <label for="second">Second value:</label>
+        <input type="number" placeholder="Enter second number" id="second">
+    </div>
+    <div>
+        <button onclick="multipleNumber()">Multiply</button>
+        <button onclick="divideNumber()">Divide</button>
+    </div>
+    <h1>-:Result:-</h1>
+    <div id="output1"></div>
+    <div id="output2"></div>
+
+    <script>
+        function multipleNumber() {
+            let a = document.getElementById("first").value;
+            let b = document.getElementById("second").value;
+            if (a == "" || b == "") {
+                document.getElementById("output1").innerHTML = "Please enter number"
+            } else {
+                let c = a * b;
+                document.getElementById("output1").innerHTML = "The multiply of " + a + " and " + b + " is " + c;
+            }
+        }
+        function divideNumber() {
+            let a = document.getElementById("first").value;
+            let b = document.getElementById("second").value;
+            if (a == "" || b == "") {
+                document.getElementById("output1").innerHTML = "Please enter number"
+            } else {
+                let c = a / b;
+                document.getElementById("output2").innerHTML = "The division of " + a + " and " + b + " is " + c;
+            }
+        }
+    </script>
+</body>
+
+</html>
