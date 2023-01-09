@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RegExp</title>
+</head>
+
+<body>
+    <h1>Regular Expressions:-</h1>
+    <p id="demo">Lorem ipsu7m dolor sit amet consectetur adipisicing elit. very very Very Very
+        Ea aliquid repellat odit cu4mque 1mollitia distinctio. Lorem ipsum dolor</p>
+    <p id="afterRegex-use-g"></p>    
+    <p id="afterRegex-use-gi"></p>    
+    <p id="textexp"></p>
+    <p id="numberexp"></p>
+    <p id="orexp"></p>
+    <script>
+        let text = document.getElementById("demo").innerText;
+        console.log(text);
+
+        let a = text.replace(/very/g, "good");
+        document.getElementById("afterRegex-use-g").innerHTML = a;
+
+        let b = text.replace(/very/gi, "good");
+        document.getElementById("afterRegex-use-gi").innerHTML = b;
+
+        let c = text.replace(/[a-m]o/g, "HAPPY");
+        document.getElementById("textexp").innerHTML = c;
+
+        let d = text.replace(/[0-5]m/g, "HAPPY");
+        document.getElementById("numberexp").innerHTML = d;
+
+        let e = text.replace(/on|Od|ou/gi, "ASDFGH");          
+        document.getElementById("orexp").innerHTML = e;
+    </script>    
+</body>
+</html>

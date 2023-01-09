@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <form class="signup">
+            <h3 class="text-center">Sign Up</h3>
+            <div>
+                <label class="form-label mt-4" for="inputname">Name:</label>
+                <input class="form-control" type="text" name="fname" id="inputname" required>
+            </div>
+            <div>
+                <label class="form-label mt-4" for="inputemail">Email:</label>
+                <input class="form-control" type="email" name="femail" id="inputemail" required>
+            </div>
+            <div>
+                <label class="form-label mt-4" for="inputphone">Phone:</label>
+                <input class="form-control" type="number" name="fphone" id="inputphone" required>
+            </div>
+            <div>
+                <label class="form-label mt-4" for="inputpassword">Password:</label>
+                <input class="form-control" type="password" name="fpassword" id="inputpassword" required>
+            </div>
+            <div>
+                <label class="form-label mt-4" for="inputcpassword">Confirm Password:</label>
+                <input class="form-control" type="password" name="fcpassword" id="inputcpassword" required>
+            </div>
+            <div class="text-center">
+                <button class="btn btn-primary mt-3" type="submit" onclick="signUp()">Submit Now</button>
+            </div>
+        </form>
+    </div>
+    <script>
+        function signUp(){
+            let name = document.getElementById("inputname").value;
+            let email = document.getElementById("inputemail").value;
+            let phone = document.getElementById("inputphone").value;
+            let pass = document.getElementById("inputpassword").value;
+            let cpass = document.getElementById("inputcpassword").value;
+    
+            localStorage.setItem("name", JSON.stringify(name));
+            localStorage.setItem("email", JSON.stringify(email));
+            localStorage.setItem("phone", JSON.stringify(phone));
+            localStorage.setItem("pass", JSON.stringify(pass));
+            localStorage.setItem("cpass", JSON.stringify(cpass));
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

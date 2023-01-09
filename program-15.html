@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RegExp</title>
+</head>
+
+<body>
+    <h1>Regular Expressions:-</h1>
+    <script>
+        let text = "Hello everyone, good good \ngood good \nGood morning to all of you, good happy day";
+        let a = text.search("Good");          //return index number
+        let b = text.replace("Good", "Very Good");          //replace that word
+        console.log(a);
+        console.log(b);
+
+        let c = text.search(/good/i);          //return index number with case-insensitive
+        console.log(c);
+        let d = text.replace(/good/i, "Very Good");          //replace that word
+        console.log(d);
+        let e = text.match(/o/g);          //return match value in array globally
+        console.log(e);
+
+        let g = text.replace("good", "happy");
+        console.log(g);
+        let h = text.replace(/Good/gi, "happy");
+        console.log(h);
+    </script>    
+</body>
+</html>

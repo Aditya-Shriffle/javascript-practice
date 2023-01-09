@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>This keywords</title>
+  </head>
+  <body>
+    <h2>This keywords:-</h2>
+    <!-- this refer element of that event -->
+    <button id="btn" onclick="this.innerHTML = 'great job'">Click for event</button>
+    <script>
+      //return global object
+      console.log(this);
+
+      //return global object
+      function myFunction(){
+        console.log(this);
+      }
+      myFunction();
+
+      //return undefined
+      function myFun(){
+        "use strict"
+        console.log(this);
+      }
+      myFun();
+
+      //return object value
+      let person = {
+        firstName: "Aditya",
+        lastName: "Jain",
+        age: 26,
+        details: function () {
+          return this.firstName + " " + this.lastName + " and age is " + this.age;
+        },
+      };
+      console.log(person.details());
+
+    </script>
+  </body>
+</html>
